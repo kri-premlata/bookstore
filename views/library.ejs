@@ -1,0 +1,29 @@
+<%- include("partials/header") %>
+
+ <% books.forEach((book)=>{ %>
+        <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="<%= book.Image %>" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title"><%= book.BookName%></h5>
+              <p class="card-text"><%= book.Description %></p>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">Author: <%= book.Author %></li>
+              <li class="list-group-item">Language: <%= book.Language %></li>
+              <li class="list-group-item">Price: <%= book.Price %></li>
+              <li class="list-group-item">Rating: <%= book.Rating %></li>
+            </ul>
+            <div class="card-body">
+              <a href="<%= book.Book_link %>" class="card-link text-decoration-none">Book Link</a>
+              <a href="<%= book.Buy_now %>" class="card-link text-decoration-none">Buy Now</a>
+            </div>
+            <button class="fs-5 rounded bg-warning text-white border-warning ">Add to cart</button>
+          </div>
+<% }) %>
+
+
+<h1>
+    <a class="text-decoration-none" href="/">Back</a>
+</h1>
+
+<%- include("partials/footer") %>
