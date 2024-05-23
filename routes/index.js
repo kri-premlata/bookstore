@@ -47,12 +47,16 @@ router.get("/library",(req,res,next)=>{
       Description:"Meike Peters, the author of the acclaimed cooking blog Eat In My Kitchen, presents a cookbook as inviting, entertaining, and irresistible as her website, featuring dozens of never-before-published recipes."
     }
   ]
-  books.forEach(book=>{
-    console.log(book.BookName);
-    console.log(book.Author);
-    console.log(book.Price);
-  })
+  // books.forEach(book=>{
+  //   console.log(book.BookName);
+  //   console.log(book.Author);
+  //   console.log(book.Price);
+  // })
   res.render('library',{books});
+});
+
+router.get("/create-book",(req,res,next)=>{
+  res.render('createbook');
 })
 
 module.exports = router;
