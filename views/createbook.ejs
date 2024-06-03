@@ -1,19 +1,61 @@
-<%- include("partials/header") %>
-<%- include("partials/nav") %>
+<%- include("partials/header") %> <%- include("partials/nav") %>
 
-<div class="createbook d-flex">
-    <img class="left-img  p-2" style="width: 43rem;" src="https://images.unsplash.com/photo-1476275466078-4007374efbbe?q=80&w=2029&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
-<form class="container rounded p-2 me-3" action="/create-book" method="post">
-    <h1 class="mb-3 fw-bolder">Book Details</h1>
-    <input  class="px-4 py-2 border-0 text-white bg-dark rounded " style="width: 25rem;" type="text" placeholder="Book Poster" name="poster"> <br><br>
-    <input class="px-4 py-2 border-0 text-white bg-dark rounded" style="width: 25rem;" type ="text" placeholder="Book Name" name="bookname"> <br><br>
-    <input class="px-4 py-2 border-0 text-white bg-dark rounded" style="width: 25rem;" type="text" placeholder="Author Name" name="authorname"> <br><br>
-    <input class="px-4 py-2 border-0 text-white bg-dark rounded" style="width: 25rem;" type="number" placeholder="ISBN Number" name="isbnNo"><br><br>
-    <input class="px-4 py-2 border-0 text-white bg-dark rounded" style="width: 25rem;" type="text" placeholder="Book Price" name="bookprice"><br><br>
-    <textarea class="px-4 py-2 border-0 text-white bg-dark rounded" style="width: 25rem; height: 7rem;" placeholder="Enter Description here.." name="description"></textarea><br>
-    <button class="btn btn-primary">Update Book</button>
-    <button class="btn btn-danger">Delete Book</button>
-</form>
+<div class="registerBox  bg-dark d-flex mt-3 px- -2 overflow-hidden">
+  <form class="mx-5" action="/create-book">
+    <h1 class="mb-4 mt-3 text-white">Register New Book</h1>
+    <input
+      class="mb-3 px-4 py-2 border-0 text-dark rounded"
+      style="width: 26rem"
+      type="text"
+      placeholder="Book Poster"
+      name="poster"
+    />
+    <br />
+    <input
+      class="mb-3 px-4 py-2 border-0 text-dark rounded"
+      style="width: 12rem"
+      type="text"
+      placeholder="Book Name"
+      name="bookname"
+    />
+    <input
+      class="mb-3 mx-4 px-4 py-2 border-0 text-dark rounded"
+      style="width: 12rem"
+      type="text"
+      placeholder="Author Name"
+      name="authorname"
+    />
+    <br>
+    <input
+      class="mb-3 px-4 py-2 border-0 text-dark rounded"
+      style="width: 12rem"
+      type="number"
+      placeholder="ISBN Number"
+      name="isbnNo"
+    />
+    <input
+      class="mb-3 mx-4 px-4 py-2 border-0 text-dark rounded"
+      style="width: 12rem"
+      type="text"
+      placeholder="Book Price"
+      name="bookprice"
+    /><br />
+    <textarea
+      class="mb-2 px-4 py-2 border-0 text-dark rounded"
+      style="width: 26rem; height: 7rem"
+      placeholder="Enter Description here.."
+      name="description"
+    ></textarea
+    ><br />
+    <a href="" class="btn btn-primary p-2 mt-1" style="width: 26rem"
+      >Add to Library</a
+    >
+  </form>
+
+  <img class="right-img p-3 rounded"
+  style="width: 43rem"
+   src="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+
 </div>
 
 <%- include("partials/footer") %>
